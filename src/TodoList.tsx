@@ -8,6 +8,7 @@ type TaskType = {
     isDone: boolean
 }
 
+
 type PropsType = {
     title: string
     tasks: Array<TaskType>
@@ -51,7 +52,7 @@ export function Todolist(props: PropsType) {
             <li key={t.id}>
                 <input type="checkbox" checked={t.isDone}/>
                 <span>{t.title}</span>
-                <button onClick={onRemoveHandler}>x</button>
+                <button onClick={onRemoveHandler}>по</button>
             </li>
         )
     })

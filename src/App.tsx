@@ -14,7 +14,7 @@ function App() {
     let [tasks, setTasks] = useState<Array<TaskType>>(
         [
             {id: v1(), title: "HTML&CSS", isDone: true},
-            {id: v1(), title: "JS", isDone: true},
+            {id: v1(), title: "хой", isDone: true},
             {id: v1(), title: "ReactJS", isDone: false},
             {id: v1(), title: "Yo", isDone: false},
         ]
@@ -25,12 +25,12 @@ function App() {
         setTasks(tasks.filter(t => t.id !== taskID))
     }
 
+
     function addTask(title: string) {
         let newTask = {id: v1(), title: title, isDone: false};
         let newTasks = [newTask, ...tasks];
         setTasks(newTasks)
     }
-
     const changeFilter = (filter: FilterValuesType) => {
         setFilter(filter)
     }
